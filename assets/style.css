@@ -141,6 +141,51 @@ details.plan .inner { padding: 0 18px 12px; }
 .glossary p { background: #fff; border-radius: 10px; padding: 10px 14px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
 .glossary p.hidden { display: none; }
 
+/* ---------- Підсумкове тестування ---------- */
+.lead { font-size: 18px; color: var(--muted); }
+.muted { color: var(--muted); }
+.exam-card { background: #fff; border-radius: var(--radius); padding: 18px 22px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.exam-card h2 { margin-top: 4px; }
+.exam-note { background: #E3F4EA; border: 2px solid var(--green); border-radius: var(--radius); padding: 12px 16px; margin: 12px 0; }
+.exam-note .btn { margin-top: 8px; }
+.exam-form .field { display: block; margin: 0 0 14px; }
+.exam-form .field span { display: block; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.exam-form input[type=text] { width: 100%; max-width: 460px; padding: 11px 14px; font-size: 17px; border: 2px solid var(--light); border-radius: 10px; }
+.exam-form input[type=text]:focus { outline: none; border-color: var(--blue); }
+.exam-form input.invalid { border-color: var(--red); }
+.field-error { display: block; color: var(--red); min-height: 1em; margin-top: 3px; }
+.exam-form .check { display: flex; gap: 10px; align-items: flex-start; margin: 8px 0 2px; cursor: pointer; }
+.exam-form .check input { margin-top: 6px; width: 18px; height: 18px; }
+.exam-form .btn { margin-top: 10px; font-size: 18px; padding: 12px 22px; }
+.exam-head { display: flex; justify-content: space-between; font-weight: 700; color: var(--navy); margin-top: 8px; }
+.exam-fill { height: 100%; background: linear-gradient(90deg, var(--blue), var(--green)); transition: width .3s; }
+.exam-topic { font-size: 14px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .03em; }
+.exam-q { border: 0; font-size: 21px; margin: 6px 0 14px; padding: 0; }
+.opt { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; margin: 8px 0; border: 2px solid var(--light); border-radius: 10px; cursor: pointer; transition: background .15s, border-color .15s; }
+.opt:hover { background: var(--bg); }
+.opt.selected { border-color: var(--blue); background: #EAF1FB; font-weight: 600; }
+.opt input { margin-top: 5px; }
+.exam-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+.btn:disabled { opacity: .45; cursor: default; }
+.exam-dots { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 6px; margin: 18px 0; }
+.exam-dots .dot { padding: 7px 0; border-radius: 8px; border: 2px solid var(--light); background: #fff; color: var(--muted); font-weight: 600; cursor: pointer; }
+.exam-dots .dot.answered { background: var(--blue); border-color: var(--blue); color: #fff; }
+.exam-dots .dot.current { outline: 3px solid var(--yellow); outline-offset: 1px; }
+.exam-result { display: flex; gap: 22px; align-items: center; border-radius: var(--radius); padding: 18px 22px; margin: 16px 0; }
+.exam-result.pass { background: #E3F4EA; border: 2px solid var(--green); }
+.exam-result.fail { background: #FBE3E0; border: 2px solid var(--red); }
+.exam-pct { font-size: 46px; font-weight: 800; color: var(--navy); min-width: 120px; text-align: center; }
+.exam-verdict { font-size: 20px; font-weight: 700; color: var(--navy); }
+.exam-review summary { cursor: pointer; font-weight: 600; color: var(--blue); margin-top: 8px; }
+.review-item { border-top: 1px solid #E1E7F0; padding: 10px 0; }
+.review-q { font-weight: 600; }
+.review-bad { color: var(--red); }
+.review-good { color: var(--green); }
+.cert-wrap { margin: 18px 0; }
+.cert-frame { background: #fff; border-radius: 6px; box-shadow: 0 6px 24px rgba(0,0,0,.18); overflow: hidden; line-height: 0; }
+.cert-frame svg { width: 100%; height: auto; display: block; }
+.cert-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+
 /* ---------- Адаптивність ---------- */
 @media (max-width: 960px) {
   #menu-btn { display: block; }
@@ -156,4 +201,11 @@ details.plan .inner { padding: 0 18px 12px; }
   .topbar, .sidebar, .done-box, .pager, .quiz-actions { display: none !important; }
   .content { margin: 0; padding: 0; }
   details.plan .inner { display: block; }
+  body.print-cert .layout { padding: 0; }
+  body.print-cert .content > *:not(#exam-app) { display: none !important; }
+  body.print-cert #exam-app > *:not(.cert-wrap) { display: none !important; }
+  body.print-cert .cert-actions { display: none !important; }
+  body.print-cert .cert-wrap { margin: 0; }
+  body.print-cert .cert-frame { box-shadow: none; border-radius: 0; }
+  body.print-cert .content > * { max-width: none; }
 }
