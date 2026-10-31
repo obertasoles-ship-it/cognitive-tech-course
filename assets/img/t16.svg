@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <g>
+    <rect x="50" y="50" width="200" height="240" rx="14" fill="#fff" stroke="#2E9E5B" stroke-width="3"/>
+    <circle cx="150" cy="140" r="50" fill="#F2C9A0"/><path d="M95,280 c0,-60 25,-85 55,-85 c30,0 55,25 55,85 z" fill="#2E74B5"/>
+    <circle cx="132" cy="135" r="5" fill="#1F3864"/><circle cx="168" cy="135" r="5" fill="#1F3864"/><path d="M132,160 q18,12 36,0" fill="none" stroke="#1F3864" stroke-width="3"/>
+    <text x="150" y="320" font-size="17" font-weight="bold" fill="#2E9E5B" text-anchor="middle">Справжнє?</text>
+  </g>
+  <g>
+    <rect x="290" y="50" width="200" height="240" rx="14" fill="#fff" stroke="#C0392B" stroke-width="3"/>
+    <circle cx="390" cy="140" r="50" fill="#F2C9A0"/><path d="M335,280 c0,-60 25,-85 55,-85 c30,0 55,25 55,85 z" fill="#2E74B5"/>
+    <circle cx="372" cy="135" r="5" fill="#1F3864"/><circle cx="408" cy="135" r="5" fill="#1F3864"/><path d="M372,160 q18,12 36,0" fill="none" stroke="#1F3864" stroke-width="3"/>
+    <g fill="#C0392B" opacity="0.75"><rect x="340" y="118" width="70" height="6"/><rect x="380" y="150" width="70" height="5"/><rect x="330" y="205" width="60" height="6"/></g>
+    <text x="390" y="320" font-size="17" font-weight="bold" fill="#C0392B" text-anchor="middle">Діпфейк?</text>
+  </g>
+  <rect x="530" y="50" width="240" height="240" rx="14" fill="#1F3864"/>
+  <text x="650" y="85" font-size="17" font-weight="bold" fill="#FFC000" text-anchor="middle">Перевір:</text>
+  <g font-size="15" fill="#fff">
+    <text x="550" y="125">✓ джерело і контекст</text>
+    <text x="550" y="160">✓ зворотний пошук</text>
+    <text x="550" y="195">✓ кодове слово</text>
+    <text x="550" y="230">✓ зворотний дзвінок</text>
+    <text x="550" y="265">✓ інші джерела</text>
+  </g>
+  <text x="400" y="370" font-size="16" fill="#1F3864" text-anchor="middle" font-weight="600">На око вже не відрізнити — потрібен протокол перевірки</text>
+</svg>

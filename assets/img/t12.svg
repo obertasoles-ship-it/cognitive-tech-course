@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#1F3864"/>
+  <g stroke="#4F6FA8" stroke-width="2">
+    <line x1="120" y1="80" x2="250" y2="150"/><line x1="120" y1="320" x2="250" y2="250"/><line x1="680" y1="80" x2="550" y2="150"/>
+    <line x1="680" y1="320" x2="550" y2="250"/><line x1="120" y1="80" x2="120" y2="320"/><line x1="680" y1="80" x2="680" y2="320"/>
+    <line x1="400" y1="30" x2="400" y2="70"/><line x1="400" y1="370" x2="400" y2="330"/>
+  </g>
+  <g fill="#2E74B5" stroke="#9DB4D6" stroke-width="2">
+    <circle cx="120" cy="80" r="14"/><circle cx="120" cy="320" r="14"/><circle cx="680" cy="80" r="14"/><circle cx="680" cy="320" r="14"/>
+    <circle cx="400" cy="30" r="10"/><circle cx="400" cy="370" r="10"/>
+  </g>
+  <path d="M400,70 L550,115 V210 C550,285 480,320 400,340 C320,320 250,285 250,210 V115 Z" fill="#2E74B5" stroke="#FFC000" stroke-width="5"/>
+  <g transform="translate(400 200)">
+    <g stroke="#1F3864" stroke-width="8" stroke-linecap="round"><line x1="-50" y1="-50" x2="50" y2="50"/><line x1="50" y1="-50" x2="-50" y2="50"/></g>
+    <g fill="#D9E2F3" stroke="#1F3864" stroke-width="3"><circle cx="-55" cy="-55" r="24"/><circle cx="55" cy="-55" r="24"/><circle cx="-55" cy="55" r="24"/><circle cx="55" cy="55" r="24"/></g>
+    <rect x="-24" y="-24" width="48" height="48" rx="10" fill="#FFC000" stroke="#1F3864" stroke-width="3"/>
+    <circle cx="0" cy="0" r="8" fill="#1F3864"/>
+  </g>
+  <text x="400" y="392" font-size="0">.</text>
+  <text x="120" y="360" font-size="14" fill="#D9E2F3" text-anchor="middle">сенсори</text>
+  <text x="680" y="360" font-size="14" fill="#D9E2F3" text-anchor="middle">штаб</text>
+  <text x="120" y="55" font-size="14" fill="#D9E2F3" text-anchor="middle">розвідка</text>
+  <text x="680" y="55" font-size="14" fill="#D9E2F3" text-anchor="middle">логістика</text>
+</svg>

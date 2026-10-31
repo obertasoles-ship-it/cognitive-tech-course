@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <rect x="60" y="40" width="420" height="320" rx="16" fill="#fff" stroke="#2E74B5" stroke-width="3"/>
+  <rect x="60" y="40" width="420" height="50" rx="16" fill="#1F3864"/><rect x="60" y="70" width="420" height="20" fill="#1F3864"/>
+  <text x="80" y="72" font-size="18" font-weight="bold" fill="#fff">Хороший запит до ШІ</text>
+  <g font-size="17" fill="#1F3864">
+    <g><rect x="85" y="113" width="26" height="26" rx="5" fill="#2E9E5B"/><path d="M90,126 l7,7 l11,-14" fill="none" stroke="#fff" stroke-width="3.5"/><text x="125" y="133"><tspan font-weight="bold">Контекст</tspan> — хто я, для кого</text></g>
+    <g><rect x="85" y="163" width="26" height="26" rx="5" fill="#2E9E5B"/><path d="M90,176 l7,7 l11,-14" fill="none" stroke="#fff" stroke-width="3.5"/><text x="125" y="183"><tspan font-weight="bold">Задача</tspan> — що саме зробити</text></g>
+    <g><rect x="85" y="213" width="26" height="26" rx="5" fill="#2E9E5B"/><path d="M90,226 l7,7 l11,-14" fill="none" stroke="#fff" stroke-width="3.5"/><text x="125" y="233"><tspan font-weight="bold">Формат</tspan> — обсяг, структура</text></g>
+    <g><rect x="85" y="263" width="26" height="26" rx="5" fill="#2E9E5B"/><path d="M90,276 l7,7 l11,-14" fill="none" stroke="#fff" stroke-width="3.5"/><text x="125" y="283"><tspan font-weight="bold">Обмеження</tspan> — чого уникати</text></g>
+    <g><rect x="85" y="313" width="26" height="26" rx="5" fill="#2E9E5B"/><path d="M90,326 l7,7 l11,-14" fill="none" stroke="#fff" stroke-width="3.5"/><text x="125" y="333"><tspan font-weight="bold">Приклад</tspan> — як має виглядати</text></g>
+  </g>
+  <circle cx="630" cy="170" r="105" fill="#FFC000"/>
+  <circle cx="630" cy="170" r="105" fill="none" stroke="#B38600" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="630" y="160" font-size="28" font-weight="bold" fill="#1F3864" text-anchor="middle">ПЕРЕВІР</text>
+  <text x="630" y="192" font-size="16" fill="#1F3864" text-anchor="middle">факти · джерела</text>
+  <text x="630" y="335" font-size="15" fill="#1F3864" text-anchor="middle" font-weight="600">Відповідальність —</text>
+  <text x="630" y="355" font-size="15" fill="#1F3864" text-anchor="middle" font-weight="600">завжди твоя</text>
+</svg>

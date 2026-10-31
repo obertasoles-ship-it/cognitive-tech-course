@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <polyline points="20,220 180,220 205,220 220,180 235,260 255,120 275,300 292,200 305,220 470,220 490,220 505,180 520,260 540,120 560,300 577,200 590,220 780,220"
+            fill="none" stroke="#C0392B" stroke-width="5" stroke-linejoin="round"/>
+  <g transform="translate(90 70)">
+    <rect x="30" y="0" width="40" height="100" rx="6" fill="#C0392B"/><rect x="0" y="30" width="100" height="40" rx="6" fill="#C0392B"/>
+  </g>
+  <g transform="translate(620 50)">
+    <rect x="0" y="0" width="110" height="110" rx="16" fill="#1F3864"/>
+    <rect x="25" y="25" width="60" height="60" rx="8" fill="none" stroke="#FFC000" stroke-width="3"/>
+    <text x="55" y="64" font-size="22" font-weight="bold" fill="#FFC000" text-anchor="middle">ШІ</text>
+    <g stroke="#FFC000" stroke-width="3"><line x1="40" y1="0" x2="40" y2="25"/><line x1="70" y1="0" x2="70" y2="25"/><line x1="40" y1="85" x2="40" y2="110"/><line x1="70" y1="85" x2="70" y2="110"/></g>
+  </g>
+  <text x="400" y="110" font-size="40" font-weight="bold" fill="#1F3864" text-anchor="middle">Лікар + ШІ</text>
+  <text x="400" y="345" font-size="16" fill="#1F3864" text-anchor="middle">діагностика · реабілітація · тактична медицина · психічне здоров'я</text>
+</svg>

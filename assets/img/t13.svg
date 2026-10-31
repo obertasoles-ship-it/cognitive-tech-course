@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <g>
+    <rect x="40" y="60" width="220" height="260" rx="18" fill="#fff" stroke="#2E74B5" stroke-width="2"/>
+    <rect x="85" y="200" width="30" height="50" fill="#8FAADC"/><rect x="125" y="170" width="30" height="80" fill="#2E74B5"/><rect x="165" y="130" width="30" height="120" fill="#1F3864"/>
+    <polyline points="80,190 120,160 160,140 210,100" fill="none" stroke="#FFC000" stroke-width="4"/>
+    <line x1="75" y1="250" x2="225" y2="250" stroke="#5A6472" stroke-width="2"/>
+    <text x="150" y="295" font-size="20" font-weight="bold" fill="#1F3864" text-anchor="middle">Бізнес</text>
+  </g>
+  <g>
+    <rect x="290" y="60" width="220" height="260" rx="18" fill="#fff" stroke="#2E74B5" stroke-width="2"/>
+    <g fill="none" stroke="#2E74B5" stroke-width="3">
+      <ellipse cx="400" cy="170" rx="80" ry="28"/><ellipse cx="400" cy="170" rx="80" ry="28" transform="rotate(60 400 170)"/><ellipse cx="400" cy="170" rx="80" ry="28" transform="rotate(-60 400 170)"/>
+    </g>
+    <circle cx="400" cy="170" r="14" fill="#FFC000"/>
+    <text x="400" y="295" font-size="20" font-weight="bold" fill="#1F3864" text-anchor="middle">Наука</text>
+  </g>
+  <g>
+    <rect x="540" y="60" width="220" height="260" rx="18" fill="#fff" stroke="#2E74B5" stroke-width="2"/>
+    <path d="M650,95 c-60,0 -90,45 -90,80 c0,45 40,75 85,75 c20,0 22,-18 12,-28 c-10,-10 -5,-25 12,-25 h25 c25,0 46,-15 46,-45 c0,-35 -40,-57 -90,-57 z" fill="#FFF4D6" stroke="#B38600" stroke-width="3"/>
+    <circle cx="610" cy="150" r="11" fill="#C0392B"/><circle cx="650" cy="125" r="11" fill="#2E74B5"/><circle cx="695" cy="140" r="11" fill="#2E9E5B"/><circle cx="600" cy="195" r="11" fill="#7D3C98"/>
+    <text x="650" y="295" font-size="20" font-weight="bold" fill="#1F3864" text-anchor="middle">Творчість</text>
+  </g>
+  <text x="400" y="370" font-size="16" fill="#5A6472" text-anchor="middle">ШІ автоматизує завдання, а не цілі професії</text>
+</svg>

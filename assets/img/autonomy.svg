@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5A6472"/></marker></defs>
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <text x="400" y="34" font-size="19" font-weight="bold" fill="#1F3864" text-anchor="middle">Рівні автономії</text>
+  <g>
+    <rect x="60"  y="280" width="105" height="40"  fill="#D9E2F3"/>
+    <rect x="175" y="250" width="105" height="70"  fill="#B4C7E7"/>
+    <rect x="290" y="215" width="105" height="105" fill="#8FAADC"/>
+    <rect x="405" y="175" width="105" height="145" fill="#2E74B5"/>
+    <rect x="520" y="130" width="105" height="190" fill="#1F4E79"/>
+    <rect x="635" y="80"  width="105" height="240" fill="#1F3864"/>
+  </g>
+  <g font-size="26" font-weight="bold" text-anchor="middle">
+    <text x="112" y="310" fill="#1F3864">0</text><text x="227" y="300" fill="#1F3864">1</text><text x="342" y="285" fill="#fff">2</text>
+    <text x="457" y="265" fill="#fff">3</text><text x="572" y="245" fill="#fff">4</text><text x="687" y="225" fill="#fff">5</text>
+  </g>
+  <g font-size="13" text-anchor="middle" fill="#1F3864">
+    <text x="112" y="342">Без</text><text x="112" y="358">автоматизації</text>
+    <text x="227" y="342">Асистент</text>
+    <text x="342" y="342">Часткова</text>
+    <text x="457" y="342">Умовна</text>
+    <text x="572" y="342">Висока</text>
+    <text x="687" y="342">Повна</text>
+  </g>
+  <line x1="80" y1="380" x2="720" y2="380" stroke="#5A6472" stroke-width="2" marker-end="url(#a)"/>
+  <text x="400" y="374" font-size="13" fill="#5A6472" text-anchor="middle">роль людини зменшується →</text>
+  <rect x="60" y="62" width="380" height="58" rx="10" fill="#FFF4D6" stroke="#FFC000" stroke-width="2"/>
+  <text x="250" y="87" font-size="15" fill="#7A5B00" text-anchor="middle" font-weight="600">Що вищі ставки (життя, безпека),</text>
+  <text x="250" y="107" font-size="15" fill="#7A5B00" text-anchor="middle" font-weight="600">то ближче до людини має бути контроль</text>
+</svg>

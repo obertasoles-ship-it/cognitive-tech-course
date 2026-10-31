@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F3864"/></marker></defs>
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <line x1="40" y1="200" x2="300" y2="200" stroke="#1F3864" stroke-width="6"/>
+  <g fill="#1F3864"><circle cx="60" cy="200" r="10"/><circle cx="180" cy="200" r="10"/><circle cx="300" cy="200" r="12" fill="#FFC000" stroke="#1F3864" stroke-width="3"/></g>
+  <g font-size="16" font-weight="bold" fill="#1F3864" text-anchor="middle"><text x="60" y="235">2026</text><text x="180" y="235">2030</text><text x="300" y="240">?</text></g>
+  <g fill="none" stroke-width="4" marker-end="url(#a)">
+    <path d="M300,200 C 380,200 400,70 500,70" stroke="#2E9E5B"/>
+    <path d="M300,200 C 380,200 400,160 500,160" stroke="#C0392B"/>
+    <path d="M300,200 C 380,200 400,240 500,240" stroke="#7D3C98"/>
+    <path d="M300,200 C 380,200 400,330 500,330" stroke="#5A6472"/>
+  </g>
+  <g font-size="16">
+    <rect x="510" y="45" width="260" height="50" rx="10" fill="#E3F4EA"/><text x="525" y="68" font-weight="bold" fill="#1E6B3E">Поступова інтеграція</text><text x="525" y="86" font-size="13" fill="#1E6B3E">ШІ — як інтернет</text>
+    <rect x="510" y="135" width="260" height="50" rx="10" fill="#FBE3E0"/><text x="525" y="158" font-weight="bold" fill="#922B21">Прискорення</text><text x="525" y="176" font-size="13" fill="#922B21">швидкі прориви і зміни</text>
+    <rect x="510" y="215" width="260" height="50" rx="10" fill="#EFE3F5"/><text x="525" y="238" font-weight="bold" fill="#5B2C6F">Фрагментація</text><text x="525" y="256" font-size="13" fill="#5B2C6F">технологічні блоки</text>
+    <rect x="510" y="305" width="260" height="50" rx="10" fill="#E5E8EC"/><text x="525" y="328" font-weight="bold" fill="#3D4550">Плато</text><text x="525" y="346" font-size="13" fill="#3D4550">сповільнення розвитку</text>
+  </g>
+  <text x="170" y="120" font-size="18" font-weight="bold" fill="#1F3864" text-anchor="middle">Сценарії 2030–2040</text>
+</svg>

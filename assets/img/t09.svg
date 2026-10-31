@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <polygon points="240,40 300,120 180,120" fill="#FFC000"/>
+  <polygon points="180,124 300,124 360,204 120,204" fill="#2E74B5"/>
+  <polygon points="120,208 360,208 420,288 60,288" fill="#1F4E79"/>
+  <polygon points="60,292 420,292 480,372 0,372" fill="#1F3864"/>
+  <g font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+    <text x="240" y="108" fill="#1F3864">Мудрість</text>
+    <text x="240" y="170">Знання</text>
+    <text x="240" y="254">Інформація</text>
+    <text x="240" y="338">Дані</text>
+  </g>
+  <g font-size="15" fill="#1F3864">
+    <text x="440" y="90">«Повернути апарат зараз,</text><text x="440" y="110">щоб не втратити його»</text>
+    <text x="440" y="160">«Перегрів у таких умовах —</text><text x="440" y="180">несправність охолодження»</text>
+    <text x="490" y="254">«Двигун перегрівається»</text>
+    <text x="540" y="338">«Температура двигуна 92°»</text>
+  </g>
+  <g stroke="#9DB4D6" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="290" y1="100" x2="432" y2="100"/><line x1="335" y1="168" x2="432" y2="168"/>
+    <line x1="395" y1="249" x2="482" y2="249"/><line x1="460" y1="333" x2="532" y2="333"/>
+  </g>
+</svg>

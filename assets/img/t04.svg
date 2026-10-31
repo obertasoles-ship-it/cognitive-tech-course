@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5A6472"/></marker></defs>
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <g font-size="15" font-weight="600" text-anchor="middle">
+    <rect x="20" y="40" width="120" height="56" rx="10" fill="#fff" stroke="#2E74B5" stroke-width="2"/><text x="80" y="74" fill="#1F3864">Текст</text>
+    <rect x="175" y="40" width="120" height="56" rx="10" fill="#fff" stroke="#2E74B5" stroke-width="2"/><text x="235" y="74" fill="#1F3864">Токени</text>
+    <rect x="330" y="40" width="130" height="56" rx="10" fill="#fff" stroke="#2E74B5" stroke-width="2"/><text x="395" y="74" fill="#1F3864">Ембединги</text>
+    <rect x="495" y="40" width="130" height="56" rx="10" fill="#1F3864"/><text x="560" y="66" fill="#fff">Шари уваги</text><text x="560" y="86" fill="#FFC000" font-size="13">× десятки</text>
+    <rect x="660" y="40" width="125" height="56" rx="10" fill="#FFC000"/><text x="722" y="66" fill="#1F3864">Наступний</text><text x="722" y="86" fill="#1F3864">токен</text>
+  </g>
+  <g stroke="#5A6472" stroke-width="2.5" marker-end="url(#a)">
+    <line x1="140" y1="68" x2="172" y2="68"/><line x1="295" y1="68" x2="327" y2="68"/><line x1="460" y1="68" x2="492" y2="68"/><line x1="625" y1="68" x2="657" y2="68"/>
+  </g>
+  <text x="400" y="160" font-size="17" fill="#1F3864" text-anchor="middle" font-weight="bold">Механізм уваги: до чого відноситься «нього»?</text>
+  <path d="M 470 255 C 445 185, 330 185, 305 255" fill="none" stroke="#C0392B" stroke-width="6"/>
+  <path d="M 470 255 C 430 165, 135 165, 95 255" fill="none" stroke="#9DB4D6" stroke-width="2"/>
+  <g font-size="16" text-anchor="middle">
+    <rect x="35" y="258" width="120" height="40" rx="8" fill="#fff" stroke="#9DB4D6"/><text x="95" y="284">Оператор</text>
+    <rect x="165" y="258" width="100" height="40" rx="8" fill="#fff" stroke="#9DB4D6"/><text x="215" y="284">посадив</text>
+    <rect x="275" y="258" width="60" height="40" rx="8" fill="#FBE3E0" stroke="#C0392B" stroke-width="2"/><text x="305" y="284" font-weight="bold">дрон,</text>
+    <rect x="345" y="258" width="40" height="40" rx="8" fill="#fff" stroke="#9DB4D6"/><text x="365" y="284">бо</text>
+    <rect x="390" y="258" width="40" height="40" rx="8" fill="#fff" stroke="#9DB4D6"/><text x="410" y="284">в</text>
+    <rect x="435" y="258" width="70" height="40" rx="8" fill="#FFF4D6" stroke="#FFC000" stroke-width="2"/><text x="470" y="284" font-weight="bold">нього</text>
+    <rect x="515" y="258" width="70" height="40" rx="8" fill="#fff" stroke="#9DB4D6"/><text x="550" y="284">сідав</text>
+    <rect x="595" y="258" width="170" height="40" rx="8" fill="#FFC000"/><text x="680" y="284" font-weight="bold" fill="#1F3864">акумулятор?</text>
+  </g>
+  <text x="400" y="350" font-size="14" fill="#5A6472" text-anchor="middle">Товста лінія — сильний зв'язок уваги, тонка — слабкий</text>
+</svg>

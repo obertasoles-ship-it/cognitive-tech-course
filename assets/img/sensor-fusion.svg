@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5A6472"/></marker></defs>
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <text x="400" y="32" font-size="19" font-weight="bold" fill="#1F3864" text-anchor="middle">Сенсорне злиття</text>
+  <g font-size="14" fill="#1F3864">
+    <rect x="30" y="55"  width="210" height="50" rx="10" fill="#fff" stroke="#2E74B5" stroke-width="2"/><text x="45" y="77" font-weight="bold">RGB-камера</text><text x="45" y="95" fill="#5A6472">деталі, колір; вдень</text>
+    <rect x="30" y="118" width="210" height="50" rx="10" fill="#fff" stroke="#C0392B" stroke-width="2"/><text x="45" y="140" font-weight="bold">Тепловізор</text><text x="45" y="158" fill="#5A6472">тепло; вночі</text>
+    <rect x="30" y="181" width="210" height="50" rx="10" fill="#fff" stroke="#2E9E5B" stroke-width="2"/><text x="45" y="203" font-weight="bold">Лідар</text><text x="45" y="221" fill="#5A6472">точна 3D-відстань</text>
+    <rect x="30" y="244" width="210" height="50" rx="10" fill="#fff" stroke="#7D3C98" stroke-width="2"/><text x="45" y="266" font-weight="bold">Радар</text><text x="45" y="284" fill="#5A6472">крізь дим, туман, дощ</text>
+    <rect x="30" y="307" width="210" height="50" rx="10" fill="#fff" stroke="#B38600" stroke-width="2"/><text x="45" y="329" font-weight="bold">IMU / GNSS</text><text x="45" y="347" fill="#5A6472">положення носія</text>
+  </g>
+  <g stroke="#5A6472" stroke-width="2" marker-end="url(#a)" fill="none">
+    <path d="M240,80 C 300,80 300,200 335,200"/><path d="M240,143 C 290,143 300,200 335,200"/><path d="M240,206 L335,203"/>
+    <path d="M240,269 C 290,269 300,206 335,206"/><path d="M240,332 C 300,332 300,206 335,206"/>
+  </g>
+  <circle cx="410" cy="203" r="72" fill="#1F3864"/>
+  <text x="410" y="198" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">Злиття</text>
+  <text x="410" y="220" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">даних</text>
+  <line x1="482" y1="203" x2="555" y2="203" stroke="#5A6472" stroke-width="3" marker-end="url(#a)"/>
+  <rect x="560" y="140" width="210" height="126" rx="14" fill="#FFC000"/>
+  <text x="665" y="185" font-size="17" font-weight="bold" fill="#1F3864" text-anchor="middle">Надійна модель</text>
+  <text x="665" y="207" font-size="17" font-weight="bold" fill="#1F3864" text-anchor="middle">сцени</text>
+  <text x="665" y="238" font-size="13" fill="#1F3864" text-anchor="middle">один сенсор «засліплений» —</text>
+  <text x="665" y="255" font-size="13" fill="#1F3864" text-anchor="middle">інші компенсують</text>
+</svg>

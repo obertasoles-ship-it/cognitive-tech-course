@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <rect x="50" y="40" width="320" height="320" rx="20" fill="#FFF4D6" stroke="#FFC000" stroke-width="3"/>
+  <polygon points="215,80 160,200 205,200 180,290 255,165 210,165 240,80" fill="#FFC000" stroke="#B38600" stroke-width="3" stroke-linejoin="round"/>
+  <text x="210" y="325" font-size="24" font-weight="bold" fill="#7A5B00" text-anchor="middle">Система 1</text>
+  <text x="210" y="350" font-size="15" fill="#7A5B00" text-anchor="middle">швидка · інтуїтивна · автоматична</text>
+  <rect x="430" y="40" width="320" height="320" rx="20" fill="#E3ECF8" stroke="#2E74B5" stroke-width="3"/>
+  <circle cx="590" cy="180" r="62" fill="none" stroke="#2E74B5" stroke-width="22" stroke-dasharray="18 14"/>
+  <circle cx="590" cy="180" r="48" fill="#2E74B5"/>
+  <circle cx="590" cy="180" r="20" fill="#E3ECF8"/>
+  <text x="590" y="325" font-size="24" font-weight="bold" fill="#1F3864" text-anchor="middle">Система 2</text>
+  <text x="590" y="350" font-size="15" fill="#1F3864" text-anchor="middle">повільна · аналітична · свідома</text>
+  <text x="400" y="205" font-size="34" fill="#5A6472" text-anchor="middle">⇄</text>
+</svg>

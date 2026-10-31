@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F3864"/></marker></defs>
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <text x="400" y="32" font-size="19" font-weight="bold" fill="#1F3864" text-anchor="middle">Цикл OODA (Дж. Бойд)</text>
+  <g fill="none" stroke="#1F3864" stroke-width="3.5" marker-end="url(#a)">
+    <path d="M 330 85 C 400 60, 470 60, 520 85"/>
+    <path d="M 640 150 C 680 190, 680 230, 640 270"/>
+    <path d="M 520 320 C 450 345, 380 345, 300 320"/>
+    <path d="M 165 270 C 125 230, 125 190, 165 150"/>
+  </g>
+  <g font-size="18" font-weight="bold" text-anchor="middle">
+    <rect x="160" y="75" width="190" height="70" rx="14" fill="#2E74B5"/><text x="255" y="108" fill="#fff">Спостерігай</text><text x="255" y="130" fill="#FFC000" font-size="13">ШІ: датчики, дрони, OSINT</text>
+    <rect x="460" y="75" width="190" height="70" rx="14" fill="#2E74B5"/><text x="555" y="108" fill="#fff">Орієнтуйся</text><text x="555" y="130" fill="#FFC000" font-size="13">ШІ: злиття, аналіз, прогноз</text>
+    <rect x="460" y="270" width="190" height="70" rx="14" fill="#FFC000"/><text x="555" y="303" fill="#1F3864">Вирішуй</text><text x="555" y="325" fill="#1F3864" font-size="13">ЛЮДИНА</text>
+    <rect x="160" y="270" width="190" height="70" rx="14" fill="#1F3864"/><text x="255" y="303" fill="#fff">Дій</text><text x="255" y="325" fill="#FFC000" font-size="13">під контролем людини</text>
+  </g>
+  <text x="400" y="200" font-size="15" fill="#5A6472" text-anchor="middle">Перевага — у того,</text>
+  <text x="400" y="220" font-size="15" fill="#5A6472" text-anchor="middle">хто проходить цикл швидше й точніше</text>
+</svg>

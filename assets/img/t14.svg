@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <g fill="#2E74B5"><circle cx="150" cy="130" r="45"/><path d="M75,290 c0,-70 30,-105 75,-105 c45,0 75,35 75,105 z"/></g>
+  <text x="150" y="330" font-size="18" font-weight="bold" fill="#1F3864" text-anchor="middle">Людина</text>
+  <text x="150" y="352" font-size="13" fill="#5A6472" text-anchor="middle">цілі · контекст · етика</text>
+  <text x="290" y="210" font-size="60" font-weight="bold" fill="#5A6472" text-anchor="middle">+</text>
+  <g transform="translate(355 125)">
+    <rect x="0" y="0" width="130" height="130" rx="18" fill="#1F3864"/>
+    <rect x="30" y="30" width="70" height="70" rx="10" fill="none" stroke="#FFC000" stroke-width="3"/>
+    <text x="65" y="75" font-size="26" font-weight="bold" fill="#FFC000" text-anchor="middle">ШІ</text>
+    <g stroke="#FFC000" stroke-width="3"><line x1="45" y1="0" x2="45" y2="30"/><line x1="85" y1="0" x2="85" y2="30"/><line x1="45" y1="100" x2="45" y2="130"/><line x1="85" y1="100" x2="85" y2="130"/><line x1="0" y1="65" x2="30" y2="65"/><line x1="100" y1="65" x2="130" y2="65"/></g>
+  </g>
+  <text x="420" y="330" font-size="18" font-weight="bold" fill="#1F3864" text-anchor="middle">Машина</text>
+  <text x="420" y="352" font-size="13" fill="#5A6472" text-anchor="middle">швидкість · обсяг · точність</text>
+  <text x="550" y="210" font-size="60" font-weight="bold" fill="#5A6472" text-anchor="middle">=</text>
+  <polygon points="670,95 693,160 760,160 706,200 727,265 670,225 613,265 634,200 580,160 647,160" fill="#FFC000" stroke="#B38600" stroke-width="3"/>
+  <text x="670" y="330" font-size="18" font-weight="bold" fill="#1F3864" text-anchor="middle">«Кентавр»</text>
+  <text x="670" y="352" font-size="13" fill="#5A6472" text-anchor="middle">сильніший за обох окремо</text>
+</svg>

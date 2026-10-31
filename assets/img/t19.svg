@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <rect x="170" y="50" width="460" height="300" rx="12" fill="#fff" stroke="#1F3864" stroke-width="4"/>
+  <rect x="185" y="65" width="430" height="270" rx="8" fill="none" stroke="#FFC000" stroke-width="2"/>
+  <text x="400" y="120" font-size="30" font-weight="bold" fill="#1F3864" text-anchor="middle">ЗАЛІК</text>
+  <text x="400" y="155" font-size="16" fill="#5A6472" text-anchor="middle">Сучасні когнітивні технології</text>
+  <g font-size="16" fill="#1F3864">
+    <text x="230" y="205">Тест · 20 запитань</text><text x="560" y="205" text-anchor="end" font-weight="bold">20 б.</text>
+    <text x="230" y="240">Кейс · письмово + захист</text><text x="560" y="240" text-anchor="end" font-weight="bold">16 б.</text>
+    <line x1="230" y1="258" x2="560" y2="258" stroke="#9DB4D6" stroke-width="2"/>
+    <text x="230" y="285">Разом за курс (поріг заліку)</text><text x="560" y="285" text-anchor="end" font-weight="bold">≥ 60 б.</text>
+  </g>
+  <circle cx="610" cy="320" r="44" fill="#2E9E5B"/><path d="M588,320 l15,15 l26,-30" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

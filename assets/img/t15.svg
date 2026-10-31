@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <rect x="385" y="90" width="30" height="230" fill="#1F3864"/>
+  <rect x="320" y="315" width="160" height="22" rx="6" fill="#1F3864"/>
+  <circle cx="400" cy="85" r="18" fill="#FFC000" stroke="#1F3864" stroke-width="3"/>
+  <line x1="190" y1="115" x2="610" y2="95" stroke="#1F3864" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#5A6472" stroke-width="2"><line x1="200" y1="115" x2="140" y2="225"/><line x1="200" y1="115" x2="260" y2="225"/><line x1="600" y1="95" x2="540" y2="205"/><line x1="600" y1="95" x2="660" y2="205"/></g>
+  <path d="M120,225 h160 a80,40 0 0 1 -160,0 z" fill="#2E74B5"/>
+  <path d="M520,205 h160 a80,40 0 0 1 -160,0 z" fill="#8FAADC"/>
+  <text x="200" y="300" font-size="20" font-weight="bold" fill="#1F3864" text-anchor="middle">Людина</text>
+  <text x="200" y="322" font-size="14" fill="#5A6472" text-anchor="middle">рішення і відповідальність</text>
+  <text x="600" y="280" font-size="20" font-weight="bold" fill="#1F3864" text-anchor="middle">Алгоритм</text>
+  <text x="600" y="302" font-size="14" fill="#5A6472" text-anchor="middle">рекомендація</text>
+  <text x="400" y="375" font-size="17" font-weight="bold" fill="#C0392B" text-anchor="middle">Відповідальність не делегується машині</text>
+</svg>

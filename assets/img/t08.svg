@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5A6472"/></marker></defs>
+  <rect width="800" height="400" fill="#F4F7FB"/>
+  <path d="M95,290 L95,240 C 60,230 50,200 55,170 C 60,100 120,70 170,80 C 225,90 250,135 245,175 L 265,205 L 245,212 L 245,240 C 245,255 230,262 210,260 L 200,290 Z" fill="#D9E2F3" stroke="#1F3864" stroke-width="3"/>
+  <g fill="#FFC000" stroke="#1F3864" stroke-width="2">
+    <circle cx="110" cy="95" r="8"/><circle cx="160" cy="80" r="8"/><circle cx="210" cy="98" r="8"/><circle cx="80" cy="135" r="8"/><circle cx="235" cy="140" r="8"/>
+  </g>
+  <polyline points="280,170 295,170 302,150 310,190 318,140 326,195 334,160 342,180 350,170 365,170" fill="none" stroke="#2E74B5" stroke-width="3"/>
+  <text x="322" y="215" font-size="13" fill="#5A6472" text-anchor="middle">сигнал мозку</text>
+  <line x1="372" y1="170" x2="410" y2="170" stroke="#5A6472" stroke-width="2.5" marker-end="url(#a)"/>
+  <rect x="415" y="125" width="150" height="90" rx="12" fill="#1F3864"/>
+  <text x="490" y="163" font-size="17" fill="#fff" text-anchor="middle" font-weight="bold">Декодер</text>
+  <text x="490" y="188" font-size="14" fill="#FFC000" text-anchor="middle">машинне навчання</text>
+  <line x1="565" y1="170" x2="605" y2="170" stroke="#5A6472" stroke-width="2.5" marker-end="url(#a)"/>
+  <g fill="#8FAADC" stroke="#1F3864" stroke-width="3" stroke-linejoin="round">
+    <rect x="615" y="180" width="70" height="80" rx="14"/>
+    <rect x="618" y="110" width="14" height="75" rx="7"/><rect x="636" y="98" width="14" height="87" rx="7"/>
+    <rect x="654" y="102" width="14" height="83" rx="7"/><rect x="672" y="115" width="14" height="70" rx="7"/>
+    <rect x="685" y="175" width="45" height="14" rx="7" transform="rotate(-35 685 182)"/>
+    <rect x="628" y="260" width="44" height="40"/>
+  </g>
+  <text x="660" y="325" font-size="14" fill="#1F3864" text-anchor="middle" font-weight="600">біонічний протез</text>
+  <path d="M650,340 C 600,385 250,385 170,310" fill="none" stroke="#2E9E5B" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#a)"/>
+  <text x="410" y="378" font-size="14" fill="#2E9E5B" text-anchor="middle" font-weight="600">зворотний зв'язок: мозок і алгоритм навчаються разом</text>
+</svg>
