@@ -118,6 +118,7 @@ details.plan .inner { padding: 0 18px 12px; }
 .hero h1 { color: #fff; font-size: 34px; }
 .hero .hero-sub { color: #B4C7E7; }
 .hero .hero-author { color: var(--yellow); font-weight: 600; }
+.hero-text .btn { margin: 6px 8px 0 0; }
 .site-footer { margin-top: 48px; padding-top: 16px; border-top: 2px solid var(--light); color: var(--muted); font-size: 14px; }
 .progress-box { background: #fff; border-radius: var(--radius); padding: 16px 20px; margin: 22px 0; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
 .progress { height: 14px; background: var(--light); border-radius: 999px; overflow: hidden; margin-top: 8px; }
