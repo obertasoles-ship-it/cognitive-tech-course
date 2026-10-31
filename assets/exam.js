@@ -5,6 +5,8 @@
   var BANK = window.EXAM_BANK || [];
   var TOPICS = window.EXAM_TOPICS || {};
   var AUTHOR = window.EXAM_AUTHOR || '';
+  var ENDPOINT = (window.SITE_CONFIG && window.SITE_CONFIG.resultsUrl) || '';   // веб-застосунок Google Apps Script
+  var VERIFY_URL = location.protocol.indexOf('http') === 0 ? location.href.replace(/[^\/]*([?#].*)?$/, 'verify.html') : '';
   var PER_TOPIC = 2;          // запитань з кожної теми
   var PASS_SHARE = 0.75;      // поріг для сертифіката
   var STORE_KEY = 'ct-exam-certificate-v1';
@@ -63,6 +65,38 @@
     return 'CT-' + r.date.slice(-4) + '-' + ('000000' + h.toString(36).toUpperCase()).slice(-6);
   }
 
+  function attemptId() {
+    var s = '', abc = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    for (var i = 0; i < 12; i++) s += abc.charAt(rnd(abc.length));
+    return s;
+  }
+
+  // Надсилання результату в Google-таблицю викладача
+  function sendResult(r, statusEl) {
+    if (!ENDPOINT) return;
+    statusEl.className = 'exam-send';
+    statusEl.textContent = 'Надсилаю результат викладачу…';
+    var payload = {
+      id: r.id, surname: r.surname, name: r.name, patronymic: r.patronymic,
+      correct: r.correct, total: r.total, pct: r.pct, passed: r.passed,
+      number: r.number || '', date: r.date
+    };
+    fetch(ENDPOINT, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).then(function () {
+      statusEl.className = 'exam-send ok';
+      statusEl.textContent = '✓ Результат надіслано викладачу курсу.';
+    }).catch(function () {
+      statusEl.className = 'exam-send err';
+      statusEl.textContent = 'Не вдалося надіслати результат (перевір інтернет). ';
+      var retry = el('button', 'btn secondary', 'Надіслати ще раз'); retry.type = 'button';
+      retry.onclick = function () { sendResult(r, statusEl); };
+      statusEl.appendChild(retry);
+    });
+  }
+
   function loadCert() { try { return JSON.parse(localStorage.getItem(STORE_KEY)); } catch (e) { return null; } }
   function saveCert(r) { try { localStorage.setItem(STORE_KEY, JSON.stringify(r)); } catch (e) { /* немає сховища */ } }
 
@@ -118,7 +152,8 @@
     var form = el('form', 'exam-card exam-form');
     form.noValidate = true;
     form.appendChild(el('h2', null, 'Дані курсанта'));
-    form.appendChild(el('p', 'muted', 'Вкажи прізвище, ім’я та по батькові так, як вони мають бути написані в сертифікаті.'));
+    form.appendChild(el('p', 'muted', 'Вкажи прізвище, ім’я та по батькові так, як вони мають бути написані в сертифікаті.' +
+      (ENDPOINT ? ' Після завершення тесту твої ПІБ і результат буде передано викладачу курсу.' : '')));
     var fields = [['surname', 'Прізвище', 'Шевченко'], ['name', 'Ім’я', 'Тарас'], ['patronymic', 'По батькові', 'Григорович']];
     var inputs = {};
     fields.forEach(function (f) {
@@ -234,6 +269,7 @@
       correct: correct, total: total, pct: Math.round(correct / total * 100), date: today()
     };
     r.passed = correct >= Math.ceil(total * PASS_SHARE);
+    r.id = attemptId();
     if (r.passed) { r.number = certNumber(r); saveCert(r); }
     renderResult(r);
     scrollTop();
@@ -251,6 +287,7 @@
     if (!r.passed) txt.appendChild(el('div', null, 'Бракує правильних відповідей: ' + (need - r.correct) + '. Повтори теми нижче й спробуй ще раз.'));
     box.appendChild(txt);
     app.appendChild(box);
+    if (ENDPOINT) { var st = el('div', 'exam-send'); app.appendChild(st); sendResult(r, st); }
 
     if (r.passed) renderCertificateBlock(r);
 
@@ -308,15 +345,18 @@
     frame.innerHTML = svg;
     wrap.appendChild(frame);
     var actions = el('div', 'cert-actions');
-    var png = el('button', 'btn', '⬇ Завантажити сертифікат (PNG)'); png.type = 'button';
-    png.onclick = function () { downloadPng(svg, 'Сертифікат_' + r.surname + '_' + r.name + '.png'); };
-    var pr = el('button', 'btn secondary', '🖨 Друк / зберегти як PDF'); pr.type = 'button';
+    var base = 'Сертифікат_' + r.surname + '_' + r.name;
+    var pdf = el('button', 'btn', '⬇ Завантажити сертифікат (PDF)'); pdf.type = 'button';
+    pdf.onclick = function () { downloadPdf(svg, base + '.pdf', r); };
+    var png = el('button', 'btn secondary', '⬇ Зображення (PNG)'); png.type = 'button';
+    png.onclick = function () { downloadPng(svg, base + '.png'); };
+    var pr = el('button', 'btn secondary', '🖨 Друк'); pr.type = 'button';
     pr.onclick = function () {
       document.body.classList.add('print-cert');
       window.print();
       setTimeout(function () { document.body.classList.remove('print-cert'); }, 500);
     };
-    actions.appendChild(png); actions.appendChild(pr);
+    actions.appendChild(pdf); actions.appendChild(png); actions.appendChild(pr);
     wrap.appendChild(actions);
     app.appendChild(wrap);
   }
@@ -372,10 +412,11 @@
         '<tspan font-weight="bold" fill="#1F3864">' + r.pct + ' %</tspan> (' + r.correct + ' з ' + r.total + ' правильних відповідей)</text>' +
       // дата і номер
       '<g font-family="' + sans + '">' +
-        '<text x="110" y="640" font-size="13" fill="#5A6472" letter-spacing="1">ДАТА ВИДАЧІ</text>' +
-        '<text x="110" y="664" font-size="20" fill="#1F3864" font-weight="bold">' + esc(r.date) + '</text>' +
-        '<text x="110" y="698" font-size="13" fill="#5A6472" letter-spacing="1">НОМЕР СЕРТИФІКАТА</text>' +
-        '<text x="110" y="720" font-size="17" fill="#1F3864" font-weight="bold">' + esc(r.number || '') + '</text>' +
+        '<text x="110" y="626" font-size="13" fill="#5A6472" letter-spacing="1">ДАТА ВИДАЧІ</text>' +
+        '<text x="110" y="650" font-size="20" fill="#1F3864" font-weight="bold">' + esc(r.date) + '</text>' +
+        '<text x="110" y="684" font-size="13" fill="#5A6472" letter-spacing="1">НОМЕР СЕРТИФІКАТА</text>' +
+        '<text x="110" y="706" font-size="17" fill="#1F3864" font-weight="bold">' + esc(r.number || '') + '</text>' +
+        (ENDPOINT && VERIFY_URL ? '<text x="110" y="728" font-size="10.5" fill="#5A6472">Перевірка: ' + esc(VERIFY_URL.replace(/^https?:\/\//, '')) + '</text>' : '') +
       '</g>' +
       // печатка
       '<g>' +
@@ -395,28 +436,68 @@
       '</svg>';
   }
 
-  function downloadPng(svg, filename) {
+  // SVG сертифіката -> canvas (scale — множник роздільності)
+  function renderCanvas(svg, scale, done) {
     var img = new Image();
     img.onload = function () {
       var c = document.createElement('canvas');
-      c.width = W * 2; c.height = H * 2;
+      c.width = W * scale; c.height = H * scale;
       var ctx = c.getContext('2d');
-      ctx.scale(2, 2);
+      ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, c.width, c.height);
+      ctx.scale(scale, scale);
       ctx.drawImage(img, 0, 0, W, H);
-      try {
-        c.toBlob(function (blob) {
-          var a = document.createElement('a');
-          a.href = URL.createObjectURL(blob);
-          a.download = filename;
-          document.body.appendChild(a); a.click();
-          setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-        }, 'image/png');
-      } catch (e) {
-        window.alert('Не вдалося зберегти PNG у цьому браузері. Скористайся кнопкою «Друк / зберегти як PDF».');
-      }
+      try { done(c); } catch (e) { window.alert('Не вдалося зберегти файл у цьому браузері. Скористайся кнопкою «Друк».'); }
     };
-    img.onerror = function () { window.alert('Не вдалося підготувати зображення. Скористайся кнопкою «Друк / зберегти як PDF».'); };
+    img.onerror = function () { window.alert('Не вдалося підготувати зображення. Скористайся кнопкою «Друк».'); };
     img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
+
+  function saveBlob(blob, filename) {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  }
+
+  function downloadPng(svg, filename) {
+    renderCanvas(svg, 2, function (c) { c.toBlob(function (b) { saveBlob(b, filename); }, 'image/png'); });
+  }
+
+  function downloadPdf(svg, filename, r) {
+    renderCanvas(svg, 3, function (c) {
+      var bin = atob(c.toDataURL('image/jpeg', 0.92).split(',')[1]);
+      var jpeg = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) jpeg[i] = bin.charCodeAt(i);
+      var title = 'Сертифікат ' + (r.number || '') + ' — ' + r.surname + ' ' + r.name + ' ' + r.patronymic;
+      saveBlob(buildPdf(jpeg, c.width, c.height, title, AUTHOR), filename);
+    });
+  }
+
+  // Мінімальний PDF: одна сторінка A4 (альбомна) з JPEG-зображенням на весь аркуш
+  function buildPdf(jpeg, imgW, imgH, title, author) {
+    var PW = 841.89, PH = 595.28;
+    var parts = [], offsets = [], pos = 0;
+    function bytes(s) { var a = new Uint8Array(s.length); for (var i = 0; i < s.length; i++) a[i] = s.charCodeAt(i) & 255; return a; }
+    function add(x) { var b = typeof x === 'string' ? bytes(x) : x; parts.push(b); pos += b.length; }
+    function hex16(s) { var h = 'FEFF'; for (var i = 0; i < s.length; i++) h += ('000' + s.charCodeAt(i).toString(16).toUpperCase()).slice(-4); return '<' + h + '>'; }
+    function obj(n, body) { offsets[n] = pos; add(n + ' 0 obj\n' + body + '\nendobj\n'); }
+    add('%PDF-1.4\n%âãÏÓ\n');
+    obj(1, '<< /Type /Catalog /Pages 2 0 R >>');
+    obj(2, '<< /Type /Pages /Kids [3 0 R] /Count 1 >>');
+    obj(3, '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ' + PW + ' ' + PH + '] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>');
+    offsets[4] = pos;
+    add('4 0 obj\n<< /Type /XObject /Subtype /Image /Width ' + imgW + ' /Height ' + imgH +
+        ' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ' + jpeg.length + ' >>\nstream\n');
+    add(jpeg);
+    add('\nendstream\nendobj\n');
+    var content = 'q ' + PW + ' 0 0 ' + PH + ' 0 0 cm /Im0 Do Q';
+    obj(5, '<< /Length ' + content.length + ' >>\nstream\n' + content + '\nendstream');
+    obj(6, '<< /Title ' + hex16(title) + ' /Author ' + hex16(author) + ' /Creator (cognitive-tech-course) >>');
+    var xref = pos, x = 'xref\n0 7\n0000000000 65535 f \n';
+    for (var k = 1; k <= 6; k++) x += ('0000000000' + offsets[k]).slice(-10) + ' 00000 n \n';
+    add(x + 'trailer\n<< /Size 7 /Root 1 0 R /Info 6 0 R >>\nstartxref\n' + xref + '\n%%EOF\n');
+    return new Blob(parts, { type: 'application/pdf' });
   }
 
   if (!BANK.length) { app.appendChild(el('p', null, 'Помилка: не знайдено банк запитань.')); return; }

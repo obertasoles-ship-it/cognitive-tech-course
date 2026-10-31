@@ -185,6 +185,20 @@ details.plan .inner { padding: 0 18px 12px; }
 .cert-frame { background: #fff; border-radius: 6px; box-shadow: 0 6px 24px rgba(0,0,0,.18); overflow: hidden; line-height: 0; }
 .cert-frame svg { width: 100%; height: auto; display: block; }
 .cert-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.exam-send { margin: 8px 0; color: var(--muted); }
+.exam-send.ok { color: var(--green); font-weight: 600; }
+.exam-send.err { color: var(--red); }
+.exam-send .btn { margin-left: 8px; padding: 6px 12px; font-size: 14px; }
+.author-line { color: var(--muted); margin-top: -6px; }
+.verify-form { display: flex; flex-wrap: wrap; gap: 10px; }
+.verify-form input { flex: 1; min-width: 220px; max-width: 360px; padding: 11px 14px; font-size: 18px; letter-spacing: .05em; text-transform: uppercase; border: 2px solid var(--light); border-radius: 10px; }
+.verify-form input:focus { outline: none; border-color: var(--blue); }
+.verify-result { margin: 16px 0; padding: 16px 20px; border-radius: var(--radius); line-height: 1.7; }
+.verify-result:empty { display: none; }
+.verify-result.ok { background: #E3F4EA; border: 2px solid var(--green); }
+.verify-result.fail { background: #FBE3E0; border: 2px solid var(--red); }
+.verify-result.wait { background: #fff; border: 2px solid var(--light); }
+.verify-result .v-title { font-size: 20px; font-weight: 700; color: var(--navy); }
 
 /* ---------- Адаптивність ---------- */
 @media (max-width: 960px) {
